@@ -1,104 +1,116 @@
 /*1-webpage must be 50% width of the viewport's width and coral background colour*/
-body{
+body {
     width: 50%;
     background-color: coral;
 }
 
 /*2-when passing over a link, they must increase their size to 1.15rem*/
-a:hover{
+a:hover {
     font-size: 1.15rem;
 }
 
 /*3-any time a form field gets the focus, it must have a 1px solid black border*/
-input:focus{
+input:focus {
     border: 1px solid black;
 }
 
 /*4-any non-visited link must be in red colour*/
-a:link{
+a:link {
     color: red;
 }
 
 /*5-any visited-link must be in grey colour*/
-a:visited{
+a:visited {
     color: grey;
 }
 
 /*6-first paragraph of section "parrafos" must have a 1px solid blue border and a 10px margin all over*/
-#parrafos p:first-child{
+#parrafos p:first-child {
     border: 1px solid blue;
     margin: 10px;
 }
 
 /*7-last paragraph of section "parrafos" must have a coral background colour*/
-#parrafos p:last-child{
+#parrafos p:last-child {
     background-color: rgb(249, 255, 80);
 }
 
 /*8-odds elements of the first level of the shopping list must have a coral background colour*/
-#listaCompra > li:nth-child(odd){
+#listaCompra>li:nth-child(odd) {
     background-color: rgb(13, 255, 0);
 }
 
 /*9-ven elements of the second level of the shopping list must have a lightskyblue background colour*/
-#listaCompra ul > li:nth-child(even){
+#listaCompra ul>li:nth-child(even) {
     background-color: lightskyblue;
 }
 
 /*10-third element with an id of "normal" within the class "parrafos" must have a font size of 0.85 rem*/
-#parrafos :nth-child(3 of .normal){
+#parrafos :nth-child(3 of .normal) {
     font-size: 0.85rem;
-    
+
 }
 
 
 /*11-Elements before the last one of any "seccion" must be in red*/
-
-section:not{
+/*section p:not(:last-child){
     color: red;
-}
+}*/
 
 /*12-First label of the form must be underlined*/
-form label:nth-child(1){
+form label:nth-child(1) {
     text-decoration: underline;
 }
 
 
 /*13-Third element of listacompra must be completely removed from DOM*/
-/*#listaCompra > ul >li:nth-child(3){
-   display: none;
-} */
+#listaCompra>ul>li:nth-child(3) {
+    display: none;
+}
 
 /*14-Elements before the last item, belonging to any list, must be hidden (but keeping its place on screen)*/
 ul li:not(:last-child) {
     visibility: hidden;
-  }
+}
+
+
 /*15-Any "parrafos" with "especial" or "normal" id must have a font size of 0.85 rem*/
 #parrafos .especial,
 #parrafos .normal {
-  font-size: 0.85rem;
+    font-size: 0.85rem;
 }
+
 /*16-Any "parrafos" that has not "especial" id, must be removed from DOM*/
-#parrafos p:not([id="especial"]) {
+#parrafos p:not(.normal) {
     display: none;
-  }
+}
+
+
 /*17-When a checkbox is selected, its label must change its colour*/
-input[type="checkbox"]:checked + label {
-    color: blue; /* Change to your desired color */
-  }
+input[type="checkbox"]:checked+label {
+    color: blue;
+    /* Change to your desired color */
+}
+
 /*18-Disabled form elements must appear in gray colour*/
 form:disabled {
-    color: gray; /* Change to your desired color */
-  }
+    color: gray;
+    /* Change to your desired color */
+}
+
 /*19-Placeholder of any input must appear in gray colour*/
 input::placeholder {
-    color: gray; /* Change to your desired color */
-  }
+    color: gray;
+    /* Change to your desired color */
+}
+
 /*20-Any required input must be in bold font*/
 input:required {
     font-weight: bold;
-  }
+}
+
 /*21-Any invalid input must be in red colour*/
 input:invalid {
-    color: red; /* Change to your desired color */
-  }
+    color: red;
+    /* Change to your desired color */
+}
